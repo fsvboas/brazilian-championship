@@ -1,3 +1,12 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+  :root {
+    --primary: 16 80 47;
+    --secondary: 48 49 52;
+    --dark: 23 23 23;
+    --light: 243 243 243;
+  }
+}
