@@ -1,5 +1,5 @@
 import React from "react";
-import "styles/globals.css";
+import "../styles/globals.css";
 import { Hydrate, QueryClient, QueryClientProvider } from "react-query";
 import type { AppProps } from "next/app";
 
