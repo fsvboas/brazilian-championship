@@ -1,5 +1,6 @@
 import React from 'react'
 import { classNames } from '../core/helpers/class-names'
+import PlayersTab from './tabs/players/players'
 import StandingsTab from './tabs/standings/standings'
 import StatsTab from './tabs/stats/stats'
 import Stats from './tabs/stats/stats'
@@ -17,7 +18,7 @@ const Main: React.FC = ({}) => {
           <h1 className="font-medium">Brasileirão Série B</h1>
         </Row>
         <nav className="flex justify-center">
-          <ul className="flex w-full lg:w-[40%] justify-between uppercase font-medium text-sm">
+          <ul className="flex w-full lg:w-[800px] justify-between uppercase font-medium text-sm">
             <li
               className={classNames(
                 'w-40 text-center cursor-pointer text-light/80 p-2',
@@ -74,7 +75,7 @@ const Main: React.FC = ({}) => {
         </nav>
       </Column>
       <Row className="flex justify-center">
-        <Row className="bg-dark w-full lg:w-[40%] h-screen justify-center">
+        <Row className="bg-dark w-full lg:w-[800px] h-screen justify-center">
           {activeTab === 'matches' ? (
             <p>Tab de partidas</p>
           ) : activeTab === 'standings' ? (
@@ -82,7 +83,7 @@ const Main: React.FC = ({}) => {
           ) : activeTab === 'stats' ? (
             <StatsTab />
           ) : activeTab === 'players' ? (
-            <p>Tab de jogadores</p>
+            <PlayersTab />
           ) : (
             ''
           )}
