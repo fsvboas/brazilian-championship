@@ -13,7 +13,6 @@ export interface StandingsTabProps {}
 const StandingsTab: React.FC<StandingsTabProps> = () => {
   const { data: standings, isLoading } = useGetAllStandings()
 
-  console.log('alo', standings)
   return (
     <Column className="h-full w-full p-8 text-light">
       <Row className="bg-secondary">

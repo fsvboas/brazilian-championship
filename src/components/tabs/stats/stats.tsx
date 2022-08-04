@@ -8,7 +8,6 @@ export interface StatsTabProps {}
 const StatsTab: React.FC<StatsTabProps> = () => {
   const { data: stats, isLoading } = useGetAllStats()
 
-  console.log(stats)
   return (
     <Column className="h-full w-full p-8 text-light">
       <Row>
