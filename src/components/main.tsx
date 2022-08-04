@@ -1,5 +1,6 @@
 import React from 'react'
 import { classNames } from '../core/helpers/class-names'
+import StandingsTab from './tabs/standings/standings'
 import StatsTab from './tabs/stats/stats'
 import Stats from './tabs/stats/stats'
 import Column from './toolkit/column'
@@ -13,11 +14,6 @@ const Main: React.FC = ({}) => {
     <Column className="h-full bg-secondary">
       <Column className="bg-primary space-y-2 border-b-4 border-dark shadow-sm">
         <Row className="text-light p-4 space-x-2">
-          <Image
-            className="w-6"
-            src="https://upload.wikimedia.org/wikipedia/pt/f/f4/Campeonato_Brasileiro_S%C3%A9rie_B_logo.png"
-            alt=""
-          />
           <h1 className="font-medium">Brasileirão Série B</h1>
         </Row>
         <nav className="flex justify-center">
@@ -82,7 +78,7 @@ const Main: React.FC = ({}) => {
           {activeTab === 'matches' ? (
             <p>Tab de partidas</p>
           ) : activeTab === 'standings' ? (
-            <p>Tab de posições</p>
+            <StandingsTab />
           ) : activeTab === 'stats' ? (
             <StatsTab />
           ) : activeTab === 'players' ? (
