@@ -17,7 +17,7 @@ const Main: React.FC = ({}) => {
           <h1 className="font-medium">Brasileirão Série X</h1>
         </Row>
         <nav className="flex justify-center">
-          <ul className="flex w-full lg:w-[800px] justify-between uppercase font-medium text-sm">
+          <ul className="flex w-full sm:w-[600px] lg:w-[800px] justify-between uppercase font-medium text-sm">
             <li
               className={classNames(
                 'w-40 text-center cursor-pointer text-light/80 p-2',
@@ -74,7 +74,7 @@ const Main: React.FC = ({}) => {
         </nav>
       </Column>
       <Row className="flex justify-center">
-        <Row className="bg-dark w-full lg:w-[800px] h-full justify-center">
+        <Row className="bg-dark w-full sm:w-[600px] lg:w-[800px] h-full justify-center">
           {activeTab === 'matches' ? (
             <MatchesTab />
           ) : activeTab === 'standings' ? (
