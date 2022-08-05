@@ -3,6 +3,8 @@ import Row from '../../toolkit/row'
 import { useGetAllStats } from '../../../hooks/stats/use-get-all-stats'
 import Column from '../../toolkit/column'
 import Image from '../../toolkit/image'
+import { classNames } from '../../../core/helpers/class-names'
+import Spinner from '../../toolkit/spinner'
 
 export interface StatsTabProps {}
 const StatsTab: React.FC<StatsTabProps> = () => {
@@ -19,6 +21,12 @@ const StatsTab: React.FC<StatsTabProps> = () => {
             <span className="text-light/60 text-xs font-medium">Jogador</span>
             <span className="text-light/60 text-xs font-medium">Gols</span>
           </Row>
+          {isLoading && (
+            <Column className={classNames('items-center text-light/60')}>
+              <Spinner color="white" size={100} />
+              Carregando estatísticas...
+            </Column>
+          )}
           {stats?.map((player) => (
             <Row
               key={player.atleta.atleta_id}

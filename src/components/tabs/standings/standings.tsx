@@ -9,13 +9,15 @@ import {
   XCircleIcon,
 } from '@heroicons/react/solid'
 import Container from '../../toolkit/container'
+import Spinner from '../../toolkit/spinner'
+import { classNames } from '../../../core/helpers/class-names'
 
 export interface StandingsTabProps {}
 const StandingsTab: React.FC<StandingsTabProps> = () => {
   const { data: standings, isLoading } = useGetAllStandings()
 
   return (
-    <Container>
+    <Container className="h-screen">
       <Column className="text-light/60">
         <Row className="bg-secondary">
           <Column className="py-2 px-6">
@@ -40,6 +42,12 @@ const StandingsTab: React.FC<StandingsTabProps> = () => {
           </Row>
         </Row>
         <Column>
+          {isLoading && (
+            <Column className={classNames('items-center')}>
+              <Spinner color="white" size={100} />
+              Carregando tabela...
+            </Column>
+          )}
           {standings?.map((club) => (
             <Row
               key={club.time.time_id}
