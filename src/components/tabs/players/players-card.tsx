@@ -12,7 +12,7 @@ const PlayersCard: React.FC<PlayersCardProps> = () => {
     <Row className="grid gap-3 h-fit grid-cols-3 md:grid-cols-6">
       {players?.map((player) => (
         <Column
-          className="border-2 rounded-xl w-28 h-52 overflow-hidden"
+          className="border border-light/20 rounded-xl w-28 h-52 overflow-hidden"
           key={player.Atleta.atleta_id}
         >
           <Image
@@ -25,11 +25,13 @@ const PlayersCard: React.FC<PlayersCardProps> = () => {
               <p className="truncate">{player.Atleta.nome}</p>
             </Row>
             <Row>
-              <span className="text-sm">{player.posicao}</span>
+              <span className="text-sm text-light/60">{player.posicao}</span>
             </Row>
             <Row className="w-full space-x-2">
               <Image className="w-4" src={player.escudo_clube} alt="" />
-              <span className="truncate">{player.clube_nome}</span>
+              <span className="truncate  text-light/60">
+                {player.clube_nome}
+              </span>
             </Row>
           </Column>
         </Column>
