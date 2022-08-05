@@ -99,26 +99,28 @@ const StandingsTab: React.FC<StandingsTabProps> = () => {
           ))}
         </Column>
         <Row>
-          <Row className="bg-light/10 my-4 mx-2 p-4 rounded w-full h-34 text-sm">
+          <div className="flex flex-col sm:flex-row bg-light/10 my-4 sm:mx-2 p-4 rounded w-full h-34 space-y-4 sm:space-y-0">
             <Column className="mr-24">
               <h3 className="font-medium">Qualificação/Rebaixamento</h3>
-              <ul className="list-square list-inside">
-                <li className="marker:text-blue-500">
+              <ul className="list-square list-inside truncate">
+                <li className="marker:text-blue-500 marker:text-lg text-sm">
                   Fase de grupo da Libertadores
                 </li>
-                <li className="marker:text-orange-500">
+                <li className="marker:text-orange-500 marker:text-lg text-sm">
                   Qualificatórias da Copa Libertadores
                 </li>
-                <li className="marker:text-green-500">
+                <li className="marker:text-green-500 marker:text-lg text-sm">
                   Qualificatórias da Copa Sul-Americana
                 </li>
-                <li className="marker:text-red-500">Rebaixamento</li>
+                <li className="marker:text-red-500 marker:text-lg text-sm">
+                  Rebaixamento
+                </li>
               </ul>
             </Column>
             <Column>
               <h3 className="font-medium truncate">Últimas cinco partidas</h3>
               <ul>
-                <Row className="space-x-2">
+                <Row className="space-x-2 mt-2">
                   <CheckCircleIcon className="h-5 text-green-500" />
                   <li>Vitória</li>
                 </Row>
@@ -132,7 +134,7 @@ const StandingsTab: React.FC<StandingsTabProps> = () => {
                 </Row>
               </ul>
             </Column>
-          </Row>
+          </div>
         </Row>
       </Column>
     </Container>
