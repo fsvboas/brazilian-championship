@@ -1,6 +1,6 @@
 import React from 'react'
 import Row from '../../toolkit/row'
-import { useGetAllStandings } from '../../../hooks/standings/use-get-all-standings'
+import { useGetAllStandings } from './hooks/use-get-all-standings'
 import Column from '../../toolkit/column'
 import Image from '../../toolkit/image'
 import {
@@ -22,7 +22,7 @@ const StandingsTab: React.FC<StandingsTabProps> = () => {
         <Row className="bg-secondary">
           <Column className="py-2 px-6">
             <h4 className="text-xs text-light/60">Temporada</h4>
-            <h4 className="text-blue-500 font-medium text-sm">2022</h4>
+            <h4 className="text-blue-500 font-medium text-sm">2723</h4>
           </Column>
         </Row>
         <Row className="justify-between p-2 border-b border-light/20">

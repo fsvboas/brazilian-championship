@@ -1,5 +1,5 @@
 import React from 'react'
-import { useGetAllPlayers } from '../../../hooks/players/use-get-all-players'
+import { useGetAllPlayers } from './hooks/use-get-all-players'
 import Column from '../../toolkit/column'
 import Image from '../../toolkit/image'
 import Row from '../../toolkit/row'

@@ -1,6 +1,6 @@
-import { handleError } from '../../core/helpers/handle-error'
-import { playersApi } from '../../core/lib/playersApi'
-import { Players } from '../../types/players'
+import { handleError } from '../../../../core/helpers/handle-error'
+import { playersApi } from '../../../../core/lib/playersApi'
+import { Players } from '../types/players'
 
 export type Params = null
 export type Response = Players[]

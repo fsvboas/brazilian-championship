@@ -1,7 +1,7 @@
-import { CustomError } from '../../types/custom-error'
+import { CustomError } from '../../../../core/types/custom-error'
 import getAllStandingsService, {
   Response,
-} from '../../services/standings/get-all-standings'
+} from '../services/get-all-standings'
 import { useQuery } from 'react-query'
 
 export const useGetAllStandings = () => {

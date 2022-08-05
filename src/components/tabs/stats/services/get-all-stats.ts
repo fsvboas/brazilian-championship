@@ -1,6 +1,6 @@
-import { handleError } from '../../core/helpers/handle-error'
-import { api } from '../../core/lib/api'
-import { Stats } from '../../types/stats'
+import { handleError } from '../../../../core/helpers/handle-error'
+import { api } from '../../../../core/lib/api'
+import { Stats } from '../types/stats'
 
 export type Params = null
 export type Response = Stats[]
