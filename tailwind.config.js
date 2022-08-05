@@ -5,6 +5,9 @@ module.exports = {
     './src/components/**/*.{js,ts,jsx,tsx}',
   ],
   theme: {
+    listStyleType: {
+      square: 'square'
+    },
     extend: {
       colors: {
         primary: 'rgb(var(--primary) / 1 )',

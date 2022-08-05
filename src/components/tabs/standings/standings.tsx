@@ -51,7 +51,17 @@ const StandingsTab: React.FC<StandingsTabProps> = () => {
           {standings?.map((club) => (
             <Row
               key={club.time.time_id}
-              className="justify-between p-2 border-b border-light/20"
+              className={`justify-between p-2 border-b border-l-4 border-light/20 ${
+                club.posicao < 5
+                  ? ' border-l-blue-500'
+                  : club.posicao < 7
+                  ? 'border-l-orange-500'
+                  : club.posicao < 13
+                  ? 'border-l-green-500'
+                  : club.posicao > 16
+                  ? 'border-l-red-500'
+                  : 'border-l-dark'
+              }`}
             >
               <Row className="w-20 sm:w-48 truncate">
                 <span className="w-4 text-center">{club.posicao}</span>
@@ -88,6 +98,42 @@ const StandingsTab: React.FC<StandingsTabProps> = () => {
             </Row>
           ))}
         </Column>
+        <Row>
+          <Row className="bg-light/10 my-4 mx-2 p-4 rounded w-full h-34 text-sm">
+            <Column className="mr-24">
+              <h3 className="font-medium">Qualificação/Rebaixamento</h3>
+              <ul className="list-square list-inside">
+                <li className="marker:text-blue-500">
+                  Fase de grupo da Libertadores
+                </li>
+                <li className="marker:text-orange-500">
+                  Qualificatórias da Copa Libertadores
+                </li>
+                <li className="marker:text-green-500">
+                  Qualificatórias da Copa Sul-Americana
+                </li>
+                <li className="marker:text-red-500">Rebaixamento</li>
+              </ul>
+            </Column>
+            <Column>
+              <h3 className="font-medium truncate">Últimas cinco partidas</h3>
+              <ul>
+                <Row className="space-x-2">
+                  <CheckCircleIcon className="h-5 text-green-500" />
+                  <li>Vitória</li>
+                </Row>
+                <Row className="space-x-2">
+                  <MinusCircleIcon className="h-5 text-light/60" />
+                  <li>Empate</li>
+                </Row>
+                <Row className="space-x-2">
+                  <XCircleIcon className="h-5 text-red-500" />
+                  <li>Derrotas</li>
+                </Row>
+              </ul>
+            </Column>
+          </Row>
+        </Row>
       </Column>
     </Container>
   )
