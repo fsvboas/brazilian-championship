@@ -1,7 +1,7 @@
-import { CustomError } from '../../types/custom-error'
+import { CustomError } from '../../../../core/types/custom-error'
 import getAllPlayersService, {
   Response,
-} from '../../services/players/get-all-players'
+} from '../services/get-all-players'
 import { useQuery } from 'react-query'
 
 export const useGetAllPlayers = () => {

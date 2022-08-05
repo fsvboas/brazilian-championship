@@ -1,6 +1,6 @@
 import React from 'react'
 import Row from '../../toolkit/row'
-import { useGetAllStats } from '../../../hooks/stats/use-get-all-stats'
+import { useGetAllStats } from './hooks/use-get-all-stats'
 import Column from '../../toolkit/column'
 import Image from '../../toolkit/image'
 import { classNames } from '../../../core/helpers/class-names'
