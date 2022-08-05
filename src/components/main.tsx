@@ -1,5 +1,6 @@
 import React from 'react'
 import { classNames } from '../core/helpers/class-names'
+import MatchesTab from './tabs/matches/matches'
 import PlayersTab from './tabs/players/players'
 import StandingsTab from './tabs/standings/standings'
 import StatsTab from './tabs/stats/stats'
@@ -77,7 +78,7 @@ const Main: React.FC = ({}) => {
       <Row className="flex justify-center">
         <Row className="bg-dark w-full lg:w-[800px] h-full justify-center">
           {activeTab === 'matches' ? (
-            <p>Tab de partidas</p>
+            <MatchesTab />
           ) : activeTab === 'standings' ? (
             <StandingsTab />
           ) : activeTab === 'stats' ? (
