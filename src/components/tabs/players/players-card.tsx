@@ -9,7 +9,7 @@ const PlayersCard: React.FC<PlayersCardProps> = () => {
   const { data: players, isLoading } = useGetAllPlayers()
 
   return (
-    <Row className="grid gap-3 h-fit grid-cols-3 sm:grid-cols-3 lg:grid-cols-6">
+    <Row className="grid gap-3 h-fit grid-cols-3 md:grid-cols-4 lg:grid-cols-6">
       {players?.map((player) => (
         <Column
           className="border border-light/20 rounded-xl w-28 h-52 overflow-hidden"
