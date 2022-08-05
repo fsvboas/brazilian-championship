@@ -75,7 +75,7 @@ const Main: React.FC = ({}) => {
         </nav>
       </Column>
       <Row className="flex justify-center">
-        <Row className="bg-dark w-full lg:w-[800px] h-screen justify-center">
+        <Row className="bg-dark w-full lg:w-[800px] h-full justify-center">
           {activeTab === 'matches' ? (
             <p>Tab de partidas</p>
           ) : activeTab === 'standings' ? (
