@@ -9,7 +9,7 @@ const StatsTab: React.FC<StatsTabProps> = () => {
   const { data: stats, isLoading } = useGetAllStats()
 
   return (
-    <Column className="h-full w-full p-8 text-light">
+    <Column className="h-screen w-full p-8 text-light">
       <Row>
         <h4 className="text-light/60 text-sm font-medium">Gols</h4>
       </Row>
