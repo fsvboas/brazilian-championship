@@ -43,7 +43,7 @@ const StandingsTab: React.FC<StandingsTabProps> = () => {
         </Row>
         <Column>
           {isLoading && (
-            <Column className={classNames('items-center')}>
+            <Column className={classNames('items-center h-screen')}>
               <Spinner color="white" size={100} />
               Carregando tabela...
             </Column>
